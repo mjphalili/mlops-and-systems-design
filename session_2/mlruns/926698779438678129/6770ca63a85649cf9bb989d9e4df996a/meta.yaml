@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mjhalili/Desktop/EADA_Files/ML_Operations/mlops-and-systems-design/session_2/mlruns/926698779438678129/6770ca63a85649cf9bb989d9e4df996a/artifacts
+end_time: 1778779579076
+entry_point_name: ''
+experiment_id: '926698779438678129'
+lifecycle_stage: active
+run_id: 6770ca63a85649cf9bb989d9e4df996a
+run_name: redolent-hawk-907
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778779578942
+status: 4
+tags: []
+user_id: mjhalili

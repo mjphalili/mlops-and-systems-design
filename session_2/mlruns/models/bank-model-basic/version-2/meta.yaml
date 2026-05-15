@@ -1,0 +1,16 @@
+creation_timestamp: 1778780047560
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1778780047560
+model_id: m-1fe5b0ae05014ce8a192080765448339
+name: bank-model-basic
+run_id: 5e26198c5b8840fbae23b39e88070fac
+run_link: null
+source: models:/m-1fe5b0ae05014ce8a192080765448339
+status: READY
+status_message: null
+storage_location: file:///Users/mjhalili/Desktop/EADA_Files/ML_Operations/mlops-and-systems-design/session_2/mlruns/926698779438678129/models/m-1fe5b0ae05014ce8a192080765448339/artifacts
+user_id: null
+version: 2
+workspace: default

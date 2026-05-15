@@ -1,0 +1,10 @@
+artifact_location: file:///Users/mjhalili/Desktop/EADA_Files/ML_Operations/mlops-and-systems-design/session_2/mlruns/926698779438678129/models/m-1fe5b0ae05014ce8a192080765448339/artifacts
+creation_timestamp: 1778780043799
+experiment_id: '926698779438678129'
+last_updated_timestamp: 1778780047553
+model_id: m-1fe5b0ae05014ce8a192080765448339
+model_type: null
+name: bank_model
+source_run_id: 5e26198c5b8840fbae23b39e88070fac
+status: 2
+status_message: null

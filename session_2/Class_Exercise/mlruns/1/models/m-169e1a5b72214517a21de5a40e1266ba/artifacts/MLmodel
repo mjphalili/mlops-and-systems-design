@@ -1,0 +1,48 @@
+artifact_path: /Users/mjhalili/Desktop/EADA_Files/ML_Operations/mlops-and-systems-design/session_2/Class_Exercise/mlruns/1/models/m-169e1a5b72214517a21de5a40e1266ba/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.12.0
+model_id: m-169e1a5b72214517a21de5a40e1266ba
+model_size_bytes: 23079581
+model_uuid: m-169e1a5b72214517a21de5a40e1266ba
+prompts: null
+run_id: 2b66137b5d3e43f887096749328d3d92
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "RowNumber", "required": true}, {"type": "double",
+    "name": "CustomerId", "required": true}, {"type": "double", "name": "Surname",
+    "required": true}, {"type": "double", "name": "CreditScore", "required": true},
+    {"type": "double", "name": "Age", "required": true}, {"type": "double", "name":
+    "Tenure", "required": true}, {"type": "double", "name": "Balance", "required":
+    true}, {"type": "double", "name": "NumOfProducts", "required": true}, {"type":
+    "double", "name": "HasCrCard", "required": true}, {"type": "double", "name": "IsActiveMember",
+    "required": true}, {"type": "double", "name": "EstimatedSalary", "required": true},
+    {"type": "double", "name": "BalanceSalaryRatio", "required": true}, {"type": "double",
+    "name": "EngagementScore", "required": true}, {"type": "double", "name": "Geography_Germany",
+    "required": true}, {"type": "double", "name": "Geography_Spain", "required": true},
+    {"type": "double", "name": "Gender_Male", "required": true}, {"type": "double",
+    "name": "AgeGroup_26-35", "required": true}, {"type": "double", "name": "AgeGroup_36-50",
+    "required": true}, {"type": "double", "name": "AgeGroup_51-65", "required": true},
+    {"type": "double", "name": "AgeGroup_65+", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-05-15 16:11:11.244890'

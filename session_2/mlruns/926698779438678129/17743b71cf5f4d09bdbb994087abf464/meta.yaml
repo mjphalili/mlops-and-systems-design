@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mjhalili/Desktop/EADA_Files/ML_Operations/mlops-and-systems-design/session_2/mlruns/926698779438678129/17743b71cf5f4d09bdbb994087abf464/artifacts
+end_time: 1778779679583
+entry_point_name: ''
+experiment_id: '926698779438678129'
+lifecycle_stage: active
+run_id: 17743b71cf5f4d09bdbb994087abf464
+run_name: melodic-owl-394
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778779669978
+status: 3
+tags: []
+user_id: mjhalili

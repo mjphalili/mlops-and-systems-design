@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mjhalili/Desktop/EADA_Files/ML_Operations/mlops-and-systems-design/session_2/mlruns/926698779438678129/5e26198c5b8840fbae23b39e88070fac/artifacts
+end_time: 1778780047568
+entry_point_name: ''
+experiment_id: '926698779438678129'
+lifecycle_stage: active
+run_id: 5e26198c5b8840fbae23b39e88070fac
+run_name: placid-fawn-629
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778780043695
+status: 3
+tags: []
+user_id: mjhalili
