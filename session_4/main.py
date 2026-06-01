@@ -1,7 +1,7 @@
-from src.load import load_data
-from src.transform import Transformer, balance_dataset
-from src.train import train_model
-from src.store import store_model
+from Class_Notes.src.load import load_data
+from Class_Notes.src.transform import Transformer, balance_dataset
+from Class_Notes.src.train import train_model
+from Class_Notes.src.store import store_model
 from metadata import MODEL_NAME
 
 
@@ -13,7 +13,5 @@ def main():
     store_model(model=lr_model, model_name=MODEL_NAME)
 
 
-# This allows to run this code only when the main.py file is executed
-# It won't be executed when importing it
 if __name__ == "__main__":
     main()
