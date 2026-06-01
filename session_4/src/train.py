@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-from metadata import MODEL_PARAMS
+from metadata import DT_PARAMS
 
 
 def train_model(df: pd.DataFrame, target_column: str) -> DecisionTreeClassifier:
@@ -16,9 +16,9 @@ def train_model(df: pd.DataFrame, target_column: str) -> DecisionTreeClassifier:
     )
 
     # Initialize model
-    trained_model = DecisionTreeClassifier(**MODEL_PARAMS)
+    model = DecisionTreeClassifier(**DT_PARAMS)
 
     # Train
-    trained_model.fit(X_train, y_train)
+    model.fit(X_train, y_train)
 
-    return trained_model
+    return model

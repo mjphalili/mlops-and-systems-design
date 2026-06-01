@@ -9,9 +9,8 @@ BINARY_FEATURES = [
 ONE_HOT_ENCODE_COLUMNS = [
     "Geography"
 ]
-MODEL_PARAMS = {
-    "solver": "lbfgs",
-    "max_iter": 1000,
-    "multi_class": "auto",
-    "random_state": 8888,
+DT_PARAMS = {
+    "criterion": "gini",
+    "max_depth": 5,
+    "random_state": 42
 }

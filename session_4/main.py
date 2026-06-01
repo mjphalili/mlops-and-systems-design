@@ -18,7 +18,7 @@ def main():
     model = train_model(df=df, target_column="Exited")
 
     # 5. Store model
-    store_model(model=trained_model, your_name="mjphalili")
+    store_model(model=model, your_name="mjphalili")
 
 
 if __name__ == "__main__":
