@@ -1,17 +1,34 @@
 ### Configure repository
 
 1. Within the `mlops-and-system-design` repository, create a folder called `session_4`
+OK
 
 
 ### Create ML pipeline
 
 1. Within the `session_4/` folder create a `metadata.py` file, and add the constants and variables you consider relevant (e.g. model params, variables category, paths, etc).
+OK
+
 2. Within the `session_4/src/` folder create a `__iniy__.py` file and leave it empty.
+OK
+
 3. Within the `session_4/src/` folder create a `source.py` file, and create a function to load the CSV from the `datasets/Churn_Modelling_train_test.csv` file.
+OK
+
 4. Within the `session_4/src/` folder create a `transform.py` file, and define the functions for the data transformation (feel free to use part of the code provided in the `exercise_support.py` file).
+OK
+
+
 5. Within the `session_4/src/` folder create a `train.py` file, and define a function that trains a decision tree model and returns the model.
+OK
+
+
 6. Within the `session_4/src/` folder create a `store.py` file, and define a function that saves the model in the `session_4/models/` folder. The model path must be `class_model-{your_name}-{timestamp}.joblib`. The timestamp can be obtained as `datetime.now().strftime("%Y-%m-%d-%H-%M-%S")`.
+OK
+
 7. Implement all the pipeline within the `main()` function in the `session_4/main.py` file.
+
+
 8. Once everything is completed, test that the pipeline works. Open a terminal and run `python session_4/main.py` (or `python main.py`, depending on the working directory). This should create a file in the `session_4/models/` folder.
 
 

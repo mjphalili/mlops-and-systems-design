@@ -1,19 +1,13 @@
-MODELS_FOLDER = "session_4/Class_Notes/models"
-DATASETS_FOLDER = "session_4/Class_Notes/datasets"
-MODEL_NAME = "logistic-regression-model"
+MODELS_FOLDER = "session_4/models"
+DATASETS_FOLDER = "session_4/datasets"
+MODEL_NAME = "decisiontree-model(trained_model)"
 
-COLUMNS_TO_DROP = []
+COLUMNS_TO_DROP = ["RowNumber", "CustomerId", "Surname"]
 BINARY_FEATURES = [
-    "housing",
-    "loan",
-    "default",
+    "Gender"
 ]
 ONE_HOT_ENCODE_COLUMNS = [
-    "marital",
-    "job",
-    "education",
-    "poutcome",
-    "contact",
+    "Geography"
 ]
 MODEL_PARAMS = {
     "solver": "lbfgs",

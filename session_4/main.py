@@ -1,16 +1,24 @@
-from Class_Notes.src.load import load_data
-from Class_Notes.src.transform import Transformer, balance_dataset
-from Class_Notes.src.train import train_model
-from Class_Notes.src.store import store_model
-from metadata import MODEL_NAME
+from src.source import load_data
+from src.transform import Transformer, balance_dataset
+from src.train import train_model
+from src.store import store_model
 
 
 def main():
-    df = load_data(file_name="bank-full_train_test.csv")
+    # 1. Load data
+    df = load_data(file_name="Churn_Modelling_train_test.csv")
+
+    # 2. Balance dataset
     df = balance_dataset(df)
+
+    # 3. Transform data
     df = Transformer().transform(df)
-    lr_model = train_model(df=df, target_column="y")
-    store_model(model=lr_model, model_name=MODEL_NAME)
+
+    # 4. Train model
+    model = train_model(df=df, target_column="Exited")
+
+    # 5. Store model
+    store_model(model=trained_model, your_name="mjphalili")
 
 
 if __name__ == "__main__":
