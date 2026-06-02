@@ -26,10 +26,9 @@ class Transformer:
         return df
 
     def _one_hot_encoding(self, df: pd.DataFrame) -> pd.DataFrame:
-        encoder = OneHotEncoder(
-            drop="first",
-            sparse_output=False
-        ).set_output(transform="pandas")
+        encoder = OneHotEncoder(drop="first", sparse_output=False).set_output(
+            transform="pandas"
+        )
 
         encoder.fit(df[self.one_hot_encoding_columns])
         encoded_df = encoder.transform(df[self.one_hot_encoding_columns])
