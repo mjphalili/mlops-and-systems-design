@@ -55,9 +55,16 @@ OK
 ### Push changes to the remote
 
 1. Save all the files
+OK
+
 2. Stage all the files using the following command on the terminal `git add session_4/`
+OK
+
 3. Commit the changes by using the the following command on the terminal `git commit -m '{MESSAGE}'`
+OK
+
 4. Push the changes to the remote using `git push origin main`
+OK
 
 
 ### Create the CI/CD
