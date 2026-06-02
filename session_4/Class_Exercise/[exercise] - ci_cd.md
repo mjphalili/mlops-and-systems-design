@@ -27,9 +27,10 @@ OK
 OK
 
 7. Implement all the pipeline within the `main()` function in the `session_4/main.py` file.
-
+OK
 
 8. Once everything is completed, test that the pipeline works. Open a terminal and run `python session_4/main.py` (or `python main.py`, depending on the working directory). This should create a file in the `session_4/models/` folder.
+OK
 
 
 ### Testing the pipeline
