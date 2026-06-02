@@ -1,98 +1,50 @@
-from src.transform import Transformer, balance_dataset
+from src.transform import Transformer
 import pandas as pd
 
 
-def test_map_binary_column_to_int():
-    transformer = Transformer()
-    df = pd.DataFrame(
-        {
-            "housing": ["yes", "no", "yes", "no"],
-            "loan": ["no", "yes", "yes", "no"],
-            "default": ["no", "yes", "yes", "no"],
-        }
-    )
-
-    expected_df = pd.DataFrame(
-        {"housing": [1, 0, 1, 0], "loan": [0, 1, 1, 0], "default": [0, 1, 1, 0]}
-    )
-
-    transformed_df = transformer._map_binary_column_to_int(df)
-
-    # Test the result against the expected DataFrame
-    pd.testing.assert_frame_equal(transformed_df, expected_df)
-
-
-def test_map_month_to_int():
-    transformer = Transformer()
-    df = pd.DataFrame({"month": ["jan", "feb", "mar", "apr"]})
-
-    expected_df = pd.DataFrame({"month": [1, 2, 3, 4]})
-
-    transformed_df = transformer._map_month_to_int(df)
-
-    # Test the result against the expected DataFrame
-    pd.testing.assert_frame_equal(transformed_df, expected_df)
-
-
-def create_df_balance():
+def create_test_df():
     return pd.DataFrame(
         {
-            "age": [25, 30, 35, 40, 45, 50],
-            "job": [
-                "admin",
-                "technician",
-                "admin",
-                "technician",
-                "admin",
-                "technician",
-            ],
-            "y": ["yes", "no", "yes", "no", "yes", "no"],
+            "RowNumber": [1],
+            "CustomerId": [123456],
+            "Surname": ["Smith"],
+            "CreditScore": [600],
+            "Geography": ["France"],
+            "Gender": ["Male"],
+            "Age": [40],
+            "Tenure": [5],
+            "Balance": [1000],
+            "NumOfProducts": [2],
+            "HasCrCard": [1],
+            "IsActiveMember": [1],
+            "EstimatedSalary": [50000],
+            "Exited": [0],
         }
     )
 
 
-def test_balance_dataset():
+def test_transform_returns_dataframe():
 
-    df_balance = create_df_balance()
-    # Define the expected balanced output
-    expected_df = pd.DataFrame(
-        {
-            "age": [25, 30, 35, 40, 45, 50],
-            "job": [
-                "admin",
-                "technician",
-                "admin",
-                "technician",
-                "admin",
-                "technician",
-            ],
-            "y": ["yes", "no", "yes", "no", "yes", "no"],
-        }
-    )
-    expected_df = expected_df.sort_values(["age", "job"]).reset_index(drop=True)
+    df = create_test_df()
 
-    # Balance the dataset
-    balanced_df = balance_dataset(df_balance)
-    balanced_df = balanced_df.sort_values(["age", "job"]).reset_index(drop=True)
+    transformed_df = Transformer().transform(df)
 
-    # Test the result against the expected DataFrame (order may vary)
-    pd.testing.assert_frame_equal(
-        balanced_df.sort_index(axis=1), expected_df.sort_index(axis=1)
-    )
+    assert isinstance(transformed_df, pd.DataFrame)
 
 
-def test_balance_with_unequal_classes():
-    df_unequal = pd.DataFrame(
-        {
-            "age": [25, 30, 35, 40, 45],
-            "job": ["admin", "technician", "admin", "technician", "admin"],
-            "y": ["no", "no", "yes", "no", "yes"],
-        }
-    )
+def test_transform_has_no_nulls():
 
-    # Balance the dataset
-    balanced_df = balance_dataset(df_unequal)
+    df = create_test_df()
 
-    # Check if classes are balanced
-    class_counts = balanced_df["y"].value_counts()
-    assert class_counts["yes"] == class_counts["no"]
+    transformed_df = Transformer().transform(df)
+
+    assert transformed_df.isnull().sum().sum() == 0
+
+
+def test_target_column_exists():
+
+    df = create_test_df()
+
+    transformed_df = Transformer().transform(df)
+
+    assert "Exited" in transformed_df.columns

@@ -38,9 +38,18 @@ OK
 1. Within the `session_4/tests/` folder create a `test_transformer.py` file, and define some tests for the transformer.
     - *Optional*: you can do as many tests as you want for the transformer.
     - *Optional*: test other parts of the code (e.g. load, save, etc.).
+OK
+
+
 2. Within the `session_4/tests/` folder create a `__iniy__.py` file and leave it empty.
+OK
+
+
 3. Save the files and run the tests. Open a terminal and run `pytest tests/`. (This will run all the tests within the `tests/` folder, but you could specify the file to be tested by defining the complete file path).
+OK
+
 4. Check if tests are passed, if not review the issues.
+OK
 
 
 ### Push changes to the remote
